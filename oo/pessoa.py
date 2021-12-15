@@ -9,6 +9,13 @@ class Pessoa:
     def cumprimentar(self):
          return f'Olá {self.nome}, {self.idade}'
 
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 if __name__ == '__main__':
     pedro = Pessoa(nome='Pedro Felipe', idade=27)
@@ -40,3 +47,6 @@ if __name__ == '__main__':
     print(solange.__dict__)
     print(pedro.__dict__)
     print(ana.__dict__)
+    print()
+    print(Pessoa.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe())
